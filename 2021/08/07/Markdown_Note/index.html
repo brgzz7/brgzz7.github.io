@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>Markdown应用笔记 - 高枕枕のBlog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="简单好用的Markdown从入门到迷恋">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown应用笔记">
+<meta property="og:url" content="https://brgzz7.github.io/2021/08/07/Markdown_Note/index.html">
+<meta property="og:site_name" content="高枕枕のBlog">
+<meta property="og:description" content="简单好用的Markdown从入门到迷恋">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-23T12:28:43.422Z">
+<meta property="article:author" content="高枕枕">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1643034888002">
+     
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1643034888002">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2021/08/20/AYkUztm6ShDGNd4.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="高枕枕" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/tou1.jpg" alt="高枕枕"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="高枕枕">
+            <img src="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/tou1.jpg" alt="高枕枕" alt="高枕枕">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>10</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>7</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/My2021.html" title="我的2021">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的2021
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/1.jpg" target="_blank" mdui-tooltip="{content: 'WeChat'}" style="color: rgb(9, 187, 7);background-color: rgba(9, 187, 7, .15);">
+            <i class="nexmoefont icon-wechat-fill"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/224437831" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/brgzz7" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Hexo-Blog/">Hexo_Blog</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/MCU-ESP32/">MCU_ESP32</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Python学习/">Python学习</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/机械老本行/">机械老本行</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/群晖NAS/">群晖NAS</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/通识小记/">通识小记</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/高枕枕のdiary/">高枕枕のdiary</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 高枕枕
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://www4.bing.com//th?id=OHR.SaCalobra_ZH-CN0945855556_1920x1080.jpg" data-sizes="auto" alt="Markdown应用笔记" class="lazyload">
+              <h1>Markdown应用笔记</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年08月07日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+</div>
+
+      
+
+      <p>简单好用的Markdown从入门到迷恋</p>
+<span id="more"></span>
+
+<p>附上官方文档<a target="_blank" rel="noopener" href="https://markdown-zh.readthedocs.io/en/latest/">Markdown</a></p>
+<p>本文基于Typora软件</p>
+<h2 id="最常用语法"><a href="#最常用语法" class="headerlink" title="最常用语法"></a>最常用语法</h2><ul>
+<li><code># 一级标题 ## 二级标题</code>以此类推</li>
+<li><code>-----</code> 分割线</li>
+<li><code>*斜体文本*</code> ctrl+i</li>
+<li><code>**粗体文本**</code>  ctrl+b</li>
+<li><code>&lt;u&gt;下划线&lt;/u&gt;</code>  ctrl+u</li>
+<li><code>- 无序列表</code></li>
+<li><code>1.有序列表</code> 两者可相互嵌套</li>
+<li><code>&gt; 区块引用</code> 可嵌套</li>
+<li>`` 代码片段<code> </code>        ctrl+shift+`</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">```python</span><br><span class="hljs-code">print(&#x27;代码块&#x27;)</span><br><span class="hljs-code">```</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><code>[叔叔我啊](https://www.bilibili.com)</code> 网页链接</li>
+<li><code>[本地跳转](绝对或相对地址)</code></li>
+<li><code>&lt;https://brgzz7.github.io/&gt;</code>        网页链接</li>
+<li><code>![图片名](https://api.idream.ink/pic.php?id=19)</code> 网络图片</li>
+<li><code>![本地图片](绝对或相对路径)</code></li>
+</ul>
+<h2 id="可用语法"><a href="#可用语法" class="headerlink" title="可用语法"></a>可用语法</h2><ul>
+<li><code>~~删除线~~</code></li>
+<li><code>==高亮==</code></li>
+<li><code>- [ ] TODO LIST</code></li>
+<li><code>要脚注的[^内容]</code></li>
+<li><code>[TOC]</code>加目录</li>
+<li><code>~下标~</code></li>
+<li><code>^上标^</code></li>
+<li><code>win+.</code>插入表情</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs markdown">[<span class="hljs-string">bilibili</span>][<span class="hljs-symbol">1</span>]<br>[<span class="hljs-symbol">1</span>]: <span class="hljs-link">http://www.bilibili.com/</span><br><br><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.loli.net/2021/07/27/FanAfMQROwleYWD.png&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;50%&quot;</span>&gt;</span></span><br><br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :-----| ----: | :----: |<br>| 单元格 | 单元格 | 单元格 |<br>| 我建议 | 直接用 | ctrl+t |<br></code></pre></td></tr></table></figure>
+
+<h2 id="typora快捷键合集"><a href="#typora快捷键合集" class="headerlink" title="typora快捷键合集"></a>typora快捷键合集</h2><p>下文用<code>CC</code>表示<code>ctrl</code>，<code>SS</code>表示<code>shift</code></p>
+<p><strong>文件</strong></p>
+<ul>
+<li>CC+N（新建）</li>
+<li>CC+SS+N（新建窗口）</li>
+<li>CC+O（打开）</li>
+<li>CC+P（快速打开）</li>
+<li>CC+S（保存）</li>
+<li>CC+SS+S（另存为）</li>
+<li>CC+逗号（设置）</li>
+<li>CC+W（关闭）</li>
+</ul>
+<p><strong>编辑</strong></p>
+<ul>
+<li>CC+Z/Y（撤销/重做）</li>
+<li>CC+X/C/V（剪切/复制/粘贴）</li>
+<li>CC+SS+C/V（复制粘贴纯文本）</li>
+<li>CC+A/L/E/D（全选/当前行/格式/词）</li>
+<li>CC+HOME/END/J（跳转到文首/末/光标）</li>
+<li>CC+SS+D（删除当前词）</li>
+<li>CC+F/H（查找/替换）</li>
+<li>WIN+句号（表情）😉</li>
+</ul>
+<p><strong>段落</strong></p>
+<ul>
+<li>CC+<code>0~6</code>（标题级别）</li>
+<li>CC+<code>=/-</code>（提升/降低标题级别）</li>
+<li>CC+T（插入表格）<ul>
+<li>CC+Enter（插入行）</li>
+<li>ALT+↑↓←→（上下移行左右移列）</li>
+<li>CC+SS+BACK（删除行）</li>
+</ul>
+</li>
+<li>CC+SS+K/M（代码块/公式块）</li>
+<li>CC+SS+Q（引用）</li>
+<li>CC+SS+[/]（有序/无序列表）</li>
+<li>CC+[/]（减小/增大缩进）</li>
+</ul>
+<p><strong>格式</strong></p>
+<ul>
+<li>CC+B/I/U（加粗/斜体/下划线）</li>
+<li>CC+SS+`/I（插入代码/图片）</li>
+<li>ALT+SS+5（删除线）</li>
+<li>CC+K（超链接）</li>
+<li>CC+\（清除样式）</li>
+</ul>
+<p><strong>视图</strong></p>
+<ul>
+<li>CC+SS+L（侧边栏）</li>
+<li>CC+SS+<code>1~3</code>（大纲/文档列表/文件树）</li>
+<li>CC+/（源代码模式）</li>
+<li>F8/F9/F11（专注/打字机/全屏模式）</li>
+<li>CC+SS+9/=/-（调/大/小）</li>
+<li>CC+TAB（切换窗口）</li>
+<li>CC+SS+F（搜索）</li>
+<li>SS+F12（开发者工具）</li>
+</ul>
+<h2 id="LaTeX公式"><a href="#LaTeX公式" class="headerlink" title="LaTeX公式"></a>LaTeX公式</h2><p>需要<a target="_blank" rel="noopener" href="https://www.latex-project.org/">LaTeX </a>支持,需要进typora偏好设置开启对应功能</p>
+<p>行内公式使用<code>$……$</code>，公式块使用<code>$$+回车</code>或<code>ctrl+shift+m</code></p>
+<p>希腊字母其实可以直接输入，大写将首字母大写即可<code>$\Alpha$</code>;斜体加上var即可<code>$\vartheta$</code></p>
+<p>下标用_，上标用^，<code>$ C_n^2 $</code> </p>
+<p> {}内视为一个整体; 默认忽略空格可输入<code>\quad</code></p>
+<p>字体，略；使用<code>\left() or \right()</code>使符号大小与左右相适应</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">代码</th>
+<th align="center">字符</th>
+<th align="center">代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">α</td>
+<td align="center">\alpha</td>
+<td align="center">$\varnothing$</td>
+<td align="center">\varnothing</td>
+</tr>
+<tr>
+<td align="center">β</td>
+<td align="center">\beta</td>
+<td align="center">$\sum\int\iint$</td>
+<td align="center">\sum\int\iint</td>
+</tr>
+<tr>
+<td align="center">δ</td>
+<td align="center">\delta</td>
+<td align="center">$\sqrt[x]{y}$</td>
+<td align="center">$\sqrt[x]{y}</td>
+</tr>
+<tr>
+<td align="center">θ</td>
+<td align="center">\theta</td>
+<td align="center">$\sin x$</td>
+<td align="center">\sin x</td>
+</tr>
+<tr>
+<td align="center">λ</td>
+<td align="center">\lambda</td>
+<td align="center">$\in\notin$</td>
+<td align="center">\in\notin</td>
+</tr>
+<tr>
+<td align="center">μ</td>
+<td align="center">\mu</td>
+<td align="center">$\infty$</td>
+<td align="center">\infty</td>
+</tr>
+<tr>
+<td align="center">π</td>
+<td align="center">\pi</td>
+<td align="center">$\cup\cap$</td>
+<td align="center">\cup\cap</td>
+</tr>
+<tr>
+<td align="center">ρ</td>
+<td align="center">\rho</td>
+<td align="center">$\subset\supset$</td>
+<td align="center">\subset\supset</td>
+</tr>
+<tr>
+<td align="center">φ</td>
+<td align="center">\phi</td>
+<td align="center">$\overrightarrow{xy}$</td>
+<td align="center">\overrightarrow{xy}</td>
+</tr>
+<tr>
+<td align="center">ω</td>
+<td align="center">\omega</td>
+<td align="center">$\frac {x}{y}$</td>
+<td align="center">\frac {x}{y}</td>
+</tr>
+<tr>
+<td align="center">$\vec a$</td>
+<td align="center">\vec a</td>
+<td align="center">$\forall\exist$</td>
+<td align="center">\forall\exist</td>
+</tr>
+<tr>
+<td align="center">$\to$​</td>
+<td align="center">\to</td>
+<td align="center">$\log _xy\ln x\lg x$​​</td>
+<td align="center">\log _xy\ln x\lg x</td>
+</tr>
+<tr>
+<td align="center">$\pm$</td>
+<td align="center">\pm</td>
+<td align="center">$\ge\le\approx\cong$</td>
+<td align="center">\ge\le\approx\cong</td>
+</tr>
+</tbody></table>
+<p>$$<br>\begin{pmatrix}<br>1&amp;0&amp;0\<br>0&amp;1&amp;0\<br>0&amp;0&amp;1\<br>\end{pmatrix}<br>$$</p>
+<p>$$<br>\begin{bmatrix}<br>{a_{11}}&amp;{a_{12}}&amp;{\cdots}&amp;{a_{1n}}\<br>{a_{21}}&amp;{a_{22}}&amp;{\cdots}&amp;{a_{2n}}\<br>{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}\<br>{a_{m1}}&amp;{a_{m2}}&amp;{\cdots}&amp;{a_{mn}}\<br>\end{bmatrix}<br>$$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs latex">%% 上面l个矩阵的代码分别是<br>\begin&#123;pmatrix&#125;<br>1&amp;0&amp;0\\<br>0&amp;1&amp;0\\<br>0&amp;0&amp;1\\<br>\end&#123;pmatrix&#125;<br>%% 小括号pmatrix;中括号bmatrix;大括号Bmatrix;单竖线vmatrix;双竖线Vmatrix<br>\begin&#123;bmatrix&#125;<br>&#123;a_&#123;11&#125;&#125;&amp;&#123;a_&#123;12&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;1n&#125;&#125;\\<br>&#123;a_&#123;21&#125;&#125;&amp;&#123;a_&#123;22&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;2n&#125;&#125;\\<br>&#123;\vdots&#125;&amp;&#123;\vdots&#125;&amp;&#123;\ddots&#125;&amp;&#123;\vdots&#125;\\<br>&#123;a_&#123;m1&#125;&#125;&amp;&#123;a_&#123;m2&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;mn&#125;&#125;\\<br>\end&#123;bmatrix&#125;<br></code></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{cases}<br>a_1x+b_1y+c_1z=d_1\<br>a_2x+b_2y+c_2z=d_2\<br>a_3x+b_3y+c_3z=d_3\<br>\end{cases}<br>$$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs latex">\begin&#123;cases&#125;<br>a_1x+b_1y+c_1z=d_1\\<br>a_2x+b_2y+c_2z=d_2\\<br>a_3x+b_3y+c_3z=d_3\\<br>\end&#123;cases&#125;<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a0aa94ef8ab2">参考文献</a></p>
+<h2 id="图解diagrams"><a href="#图解diagrams" class="headerlink" title="图解diagrams"></a>图解diagrams</h2><p>需要<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/">mermaid</a>支持</p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph LR        %%横向显示<br>%% graph TD      竖向显示<br>NAME_A[方形] --&gt;B(圆角)<br>B --&gt;|Link text|C&#123;菱形&#125;<br>C --&gt;|one| D[果1]<br>C --&gt;|two| E[果2]<br></code></pre></td></tr></table></figure>
+
+<h3 id="甘特图Gantt"><a href="#甘特图Gantt" class="headerlink" title="甘特图Gantt"></a>甘特图Gantt</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">gantt<br>    title 试试甘特图<br>    dateFormat  YYYY-MM-DD<br>    section 我<br>    任务一      :a1, 2021-01-01, 30d<br>    任务二      :after a1  , 20d<br>    section 你<br>    Task1      :2021-01-12  , 12d<br>    Task2      :24d<br></code></pre></td></tr></table></figure>
+
+<h3 id="饼图-PieChart"><a href="#饼图-PieChart" class="headerlink" title="饼图 PieChart"></a>饼图 PieChart</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">pie<br>    title 试试饼图<br>    &quot;语文&quot; : 73<br>    &quot;数学&quot; : 32<br>    &quot;英语&quot; : 97<br>    &quot;物理&quot; : 16<br></code></pre></td></tr></table></figure>
+
+<p>🎉</p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>高枕枕<br>
+        <strong>本文链接：</strong><a href="https://brgzz7.github.io/2021/08/07/Markdown_Note/" title="https:&#x2F;&#x2F;brgzz7.github.io&#x2F;2021&#x2F;08&#x2F;07&#x2F;Markdown_Note&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;brgzz7.github.io&#x2F;2021&#x2F;08&#x2F;07&#x2F;Markdown_Note&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E9%80%9A%E8%AF%86%E5%B0%8F%E8%AE%B0/">通识小记</a>
+    
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1643034888003"></script>
+
+
+	<script async src="/js/search.js?v=1643034888003"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>

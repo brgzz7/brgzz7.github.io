@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>群晖安装笔记 - 高枕枕のBlog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="群晖真的好用，装个玩玩吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群晖安装笔记">
+<meta property="og:url" content="https://brgzz7.github.io/2021/07/25/Synology_Install/index.html">
+<meta property="og:site_name" content="高枕枕のBlog">
+<meta property="og:description" content="群晖真的好用，装个玩玩吧">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-23T13:20:45.054Z">
+<meta property="article:author" content="高枕枕">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1643034888010">
+     
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1643034888010">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2021/08/20/AYkUztm6ShDGNd4.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="高枕枕" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/tou1.jpg" alt="高枕枕"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="高枕枕">
+            <img src="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/tou1.jpg" alt="高枕枕" alt="高枕枕">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>10</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>7</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/My2021.html" title="我的2021">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的2021
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://cdn.jsdelivr.net/gh/brgzz7/mycdn/img/1.jpg" target="_blank" mdui-tooltip="{content: 'WeChat'}" style="color: rgb(9, 187, 7);background-color: rgba(9, 187, 7, .15);">
+            <i class="nexmoefont icon-wechat-fill"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/224437831" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/brgzz7" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Hexo-Blog/">Hexo_Blog</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/MCU-ESP32/">MCU_ESP32</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Python学习/">Python学习</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/机械老本行/">机械老本行</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/群晖NAS/">群晖NAS</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/通识小记/">通识小记</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/高枕枕のdiary/">高枕枕のdiary</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 高枕枕
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: NaN%;"> 
+              <img data-src="https://www4.bing.com//th?id=OHR.SkiTouring_ZH-CN0237169285_1920x1080.jpg" data-sizes="auto" alt="群晖安装笔记" class="lazyload">
+              <h1>群晖安装笔记</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年07月25日</a>
+    <a><i class="nexmoefont icon-areachart"></i>672 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
+      
+
+      <p>群晖真的好用，装个玩玩吧</p>
+<span id="more"></span>
+
+<p>All in one 家庭服务器折腾起来真的很耐玩.大神的话可以装Linux直接撸命令行</p>
+<p>但对于像我这样不想动脑子的,装个群晖先准没错,因为它是真的很好用</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=473403139&auto=0&height=66"></iframe>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>本文用的版本是DS918,设备是当年250+淘的蜗牛星际(那时买这玩意回来装win10当pc,感觉又穷酸又超值)</p>
+<h3 id="u盘引导"><a href="#u盘引导" class="headerlink" title="u盘引导"></a>u盘引导</h3><ul>
+<li>准备一台电脑,一台适合装群晖的设备,一个U盘</li>
+<li>用DiskGenius删除u盘所有分区</li>
+<li>用芯片无忧查看u盘pid和vid并记录</li>
+<li>用DiskImage将img文件也就是引导写入u盘</li>
+<li>用DiskGenius找到/esp/grub/grub.cfg</li>
+<li>修改其中对应的pid和vid，sn和mac也可以随便改点</li>
+</ul>
+<h3 id="硬盘引导"><a href="#硬盘引导" class="headerlink" title="硬盘引导"></a>硬盘引导</h3><ul>
+<li>两种引导方式二选一</li>
+<li>在pe中用DiskGenius删除硬盘所有分区</li>
+<li>用DiskImage将img文件也就是引导写入硬盘</li>
+<li>装过群晖的可以改一改sn和mac地址防止发生奇怪的事情</li>
+<li>第一次装的可以跳过上一步</li>
+</ul>
+<h3 id="装系统"><a href="#装系统" class="headerlink" title="装系统"></a>装系统</h3><ul>
+<li>连网线重启，进路由器后台看ip地址</li>
+<li>手动安装选择准备好的pat文件</li>
+<li>等待安装完成然后下一步下一步</li>
+</ul>
+<h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><ul>
+<li>进设置关闭自动更新</li>
+<li>在<code>存储空间管理员</code>新建存储空间</li>
+<li>进设置新建共享文件夹</li>
+<li>进我的电脑访问<code>\\192.168.xx.xx</code> </li>
+<li>映射好网络驱动器</li>
+</ul>
+<h2 id="安装qBittorrent"><a href="#安装qBittorrent" class="headerlink" title="安装qBittorrent"></a>安装qBittorrent</h2><ul>
+<li>在控制面板/用户账号中启用admin用户，记得改好密码</li>
+<li>在用户账号/高级设置里面启动家目录服务，因为到时候装好了，一系列文件都是默认存在homes目录admin里面</li>
+<li>在套件中心手动安装网上找的 qBittorrent 套件<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Rp2mBbPEByD5jSGmsROmCA">a1hm</a></li>
+<li>安装完成后点开或者打开<code>ip:8085/</code>,默认用户名<code>admin</code>密码为<code>adminadmin</code></li>
+<li>到此就能用了</li>
+</ul>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul>
+<li>更改下载位置</li>
+<li>在控制面版里面新建共享文件夹</li>
+<li>切记勾选admin用户的写入读取权限</li>
+<li>然后就可以在这个盘里面新建文件夹作为下载目录</li>
+<li>如果权限不足可能会出现没速度或者下载失败的情况</li>
+<li>替换WebUI</li>
+<li>我使用的是<a target="_blank" rel="noopener" href="https://github.com/CzBiX/qb-web">CzBiX</a>大佬的项目</li>
+<li>下载并解压releases里面的包</li>
+<li>将public文件夹放到上面新建的盘符中</li>
+<li>把该地址填入qbittorrent的 web ui 设置中</li>
+<li>滚轮到下面点设置系统就会自动刷新界面</li>
+<li>如果出问题了也不要担心，在网址后面加上<code>/api/v2/app/setPreferences?json=%7B%22alternative_webui_enabled%22:false%7D</code>就能回到原来的UI样式</li>
+</ul>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>高枕枕<br>
+        <strong>本文链接：</strong><a href="https://brgzz7.github.io/2021/07/25/Synology_Install/" title="https:&#x2F;&#x2F;brgzz7.github.io&#x2F;2021&#x2F;07&#x2F;25&#x2F;Synology_Install&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;brgzz7.github.io&#x2F;2021&#x2F;07&#x2F;25&#x2F;Synology_Install&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%BE%A4%E6%99%96NAS/">群晖NAS</a>
+    
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     
+    <div id="nexmoe-search-space">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-container">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
+                </div>
+                <a class="search-close" onclick="sclose();">×</a>
+            </div>
+            <div class="search-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1643034888011"></script>
+
+
+	<script async src="/js/search.js?v=1643034888011"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
